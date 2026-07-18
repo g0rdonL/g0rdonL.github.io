@@ -192,6 +192,8 @@ html[data-theme="light"] .icon-moon { display: block; }
   color: var(--accent-2); white-space: nowrap;
 }
 .tl-role { color: var(--text); font-weight: 500; margin: 4px 0 8px; }
+.tl-role-sep { color: var(--text-faint); margin: 0 6px; }
+.tl-date-inline { color: var(--accent-2); font-family: 'JetBrains Mono', monospace; font-size: .8rem; }
 .tl-desc { color: var(--text-dim); font-size: .96rem; }
 
 .awards { margin-top: 44px; background: var(--bg-soft); border: 1px solid var(--border); border-radius: 14px; padding: 24px 26px; }
@@ -239,11 +241,6 @@ html[data-theme="light"] .icon-moon { display: block; }
   display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
   color: var(--text-faint); font-size: .85rem;
 }
-
-/* TODO markers (visible only while drafting) */
-.todo { color: #ff8f6b; font-style: italic; font-size: .9em; }
-html[data-theme="light"] .todo { color: #d9531e; }
-.todo-li .tl-card { border-style: dashed; }
 
 /* reveal animation */
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
