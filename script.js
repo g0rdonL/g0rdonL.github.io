@@ -1,18 +1,3 @@
-// Theme toggle with persistence + system default
-(function () {
-  const root = document.documentElement;
-  const stored = localStorage.getItem('theme');
-  const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-  root.setAttribute('data-theme', stored || (prefersLight ? 'light' : 'dark'));
-
-  const btn = document.getElementById('theme-toggle');
-  btn.addEventListener('click', () => {
-    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    root.setAttribute('data-theme', next);
-    localStorage.setItem('theme', next);
-  });
-})();
-
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
