@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Gordon Lee — Software Engineer</title>
-<meta name="description" content="Gordon Lee — software engineer building in crypto/Web3." />
+<title>Gordon Lee — AI Automation Consulting</title>
+<meta name="description" content="Gordon Lee — AI automation consulting for Hong Kong SMBs. WhatsApp bots, workflow automation, custom AI agents." />
 <meta name="author" content="Gordon Lee" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Gordon Lee — Software Engineer" />
-<meta property="og:description" content="Software engineer building in crypto/Web3." />
+<meta property="og:title" content="Gordon Lee — AI Automation Consulting" />
+<meta property="og:description" content="AI automation consulting for Hong Kong SMBs. Free consultation, working prototype, fixed pricing." />
 <meta property="og:url" content="https://gordonlee.xyz" />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨🏻‍💻</text></svg>" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -39,8 +39,8 @@ a{color:inherit;text-decoration:none}
 main{padding:0}
 .hero{padding:120px 56px 90px;border-bottom:1px solid var(--border-soft)}
 .hero-tag{font-family:var(--mono);font-size:.78rem;color:var(--accent);letter-spacing:.04em;margin-bottom:24px}
-.hero h1{font-size:clamp(3.2rem,6.5vw,6rem);font-weight:900;letter-spacing:-.05em;line-height:.95;margin-bottom:28px}
-.hero h1 em{font-style:normal;color:var(--text-faint)}
+.hero h1{font-size:clamp(2.6rem,5.4vw,5rem);font-weight:900;letter-spacing:-.04em;line-height:1.02;margin-bottom:28px}
+.hero h1 em{font-style:normal;color:var(--accent)}
 .lede{font-size:clamp(1.15rem,1.8vw,1.35rem);color:var(--text-dim);max-width:680px;font-weight:400}
 .hl{color:var(--accent-2);font-weight:600}
 .hero-cta{display:flex;gap:14px;margin-top:40px;flex-wrap:wrap}
@@ -56,9 +56,10 @@ main{padding:0}
 .stat .v{font-size:1.05rem;font-weight:600}
 .section{padding:88px 56px;border-bottom:1px solid var(--border-soft)}
 .section:last-child{border-bottom:none}
-.section-head{display:flex;align-items:baseline;gap:18px;margin-bottom:48px}
+.section-head{display:flex;align-items:baseline;gap:18px;margin-bottom:20px}
 .section-num{font-family:var(--mono);color:var(--accent);font-size:.8rem}
 .section-head h2{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:800;letter-spacing:-.03em}
+.section-intro{color:var(--text-dim);max-width:64ch;margin-bottom:48px;font-size:1.05rem}
 .about-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:64px}
 .about-body p{color:var(--text-dim);margin-bottom:22px;font-size:1.08rem;max-width:56ch}
 .about-body strong{color:var(--text);font-weight:600}
@@ -97,6 +98,23 @@ main{padding:0}
 .contact p{color:var(--text-dim);font-size:1.05rem;margin-bottom:34px;max-width:50ch}
 .contact-links{display:flex;gap:14px;flex-wrap:wrap}
 .footer{padding:28px 56px;color:var(--text-faint);font-size:.8rem;font-family:var(--mono);display:flex;justify-content:space-between}
+/* Services / process / pricing */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border-soft);margin-bottom:64px}
+.step{background:var(--bg-card);padding:28px 24px}
+.step .n{font-family:var(--mono);color:var(--accent);font-size:.9rem;margin-bottom:12px}
+.step h3{font-size:1rem;font-weight:700;margin-bottom:8px}
+.step p{color:var(--text-dim);font-size:.86rem}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border-soft)}
+.tier{background:var(--bg-card);padding:32px 28px;display:flex;flex-direction:column}
+.tier .k{font-family:var(--mono);font-size:.68rem;color:var(--text-faint);text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px}
+.tier h3{font-size:1.3rem;font-weight:800;margin-bottom:10px}
+.tier .price{font-family:var(--mono);font-size:1.15rem;color:var(--accent);margin-bottom:6px}
+.tier .proto{font-family:var(--mono);font-size:.78rem;color:var(--accent-2);margin-bottom:18px}
+.tier p.desc{color:var(--text-dim);font-size:.9rem;margin-bottom:18px;flex:1}
+.tier ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.tier li{font-size:.85rem;color:var(--text-dim);padding-left:16px;position:relative}
+.tier li::before{content:'—';position:absolute;left:0;color:var(--text-faint)}
+.retainer-note{margin-top:32px;padding:22px 26px;background:var(--bg-card);border:1px solid var(--border-soft);color:var(--text-dim);font-size:.9rem;font-family:var(--mono)}
 @media(max-width:960px){
   .wrap{grid-template-columns:1fr}
   .side{position:relative;height:auto;border-right:none;border-bottom:1px solid var(--border-soft);padding:32px}
@@ -108,6 +126,8 @@ main{padding:0}
   .stats{grid-template-columns:1fr}
   .stat{border-right:none;border-bottom:1px solid var(--border-soft)}
   .tl-row{grid-template-columns:1fr;gap:6px}
+  .steps{grid-template-columns:1fr 1fr}
+  .tiers{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -117,27 +137,81 @@ main{padding:0}
   <div class="side-brand">gordon<span>@</span>lee</div>
   <div class="side-sub">~/whoami</div>
   <nav class="side-nav">
-    <a href="#about"><span class="n">01</span>about</a>
-    <a href="#experience"><span class="n">02</span>experience</a>
-    <a href="#projects"><span class="n">03</span>projects</a>
-    <a href="#contact"><span class="n">04</span>contact</a>
+    <a href="#services"><span class="n">01</span>services</a>
+    <a href="#process"><span class="n">02</span>process</a>
+    <a href="#about"><span class="n">03</span>about</a>
+    <a href="#experience"><span class="n">04</span>experience</a>
+    <a href="#contact"><span class="n">05</span>contact</a>
   </nav>
-  <div class="side-foot"><span class="dot"></span>available for select work</div>
+  <div class="side-foot"><span class="dot"></span>booking free consultations</div>
 </aside>
 <main>
 <section class="hero">
-  <p class="hero-tag">// software engineer</p>
-  <h1>Gordon<br><em>Lee</em></h1>
-  <p class="lede">Building in <span class="hl">crypto &amp; Web3</span>. I ship infrastructure, automation, and AI-agent systems end to end — from database to deploy.</p>
-  <div class="hero-cta"><a class="btn btn-primary" href="#contact">get in touch</a><a class="btn btn-ghost" href="https://github.com/g0rdonL" target="_blank" rel="noopener">github →</a></div>
+  <p class="hero-tag">// AI automation consulting · Hong Kong SMBs</p>
+  <h1>I automate your <em>busywork</em>.</h1>
+  <p class="lede">WhatsApp AI assistants, workflow automation, and custom AI agents for Hong Kong small businesses — built and run by someone who operates <span class="hl">four live AI-agent systems</span> across real businesses today, not slideware.</p>
+  <div class="hero-cta"><a class="btn btn-primary" href="#contact">book a free consultation</a><a class="btn btn-ghost" href="#services">see pricing →</a></div>
 </section>
 <div class="stats">
-  <div class="stat"><div class="k">Focus</div><div class="v">Backend · Infra · AI agents</div></div>
-  <div class="stat"><div class="k">Languages</div><div class="v">EN · 廣東話 · 普通话</div></div>
-  <div class="stat"><div class="k">Education</div><div class="v">Durham University</div></div>
+  <div class="stat"><div class="k">Free</div><div class="v">30-min consultation + written plan</div></div>
+  <div class="stat"><div class="k">Proof</div><div class="v">Working prototype before you commit</div></div>
+  <div class="stat"><div class="k">Pricing</div><div class="v">Fixed, by complexity — no hourly guessing</div></div>
 </div>
+<section id="services" class="section">
+  <div class="section-head"><span class="section-num">01</span><h2>Services &amp; Pricing</h2></div>
+  <p class="section-intro">Every project starts free. I diagnose the problem, hand you a written plan with a fixed price, then build a paid prototype (creditable against the final build) so you see it working before paying in full.</p>
+  <div class="tiers">
+    <div class="tier">
+      <div class="k">Tier 1 · Simple</div>
+      <h3>Single automation</h3>
+      <div class="price">HKD 2,300 – 4,700</div>
+      <div class="proto">Prototype: HKD 460 – 940 (20%, creditable)</div>
+      <p class="desc">One trigger, one action, existing API. Get a repetitive task off your plate this week.</p>
+      <ul>
+        <li>WhatsApp auto-reply / FAQ bot</li>
+        <li>Single-system integration</li>
+        <li>1 week typical turnaround</li>
+      </ul>
+    </div>
+    <div class="tier">
+      <div class="k">Tier 2 · Standard</div>
+      <h3>Multi-step workflow</h3>
+      <div class="price">HKD 6,200 – 11,700</div>
+      <div class="proto">Prototype: HKD 1,240 – 2,340 (20%, creditable)</div>
+      <p class="desc">Connects 2-3 systems with branching logic — the sweet spot for most SMB operations.</p>
+      <ul>
+        <li>Lead qualification + CRM logging</li>
+        <li>Order/booking automation</li>
+        <li>2-3 week typical turnaround</li>
+      </ul>
+    </div>
+    <div class="tier">
+      <div class="k">Tier 3 · Complex</div>
+      <h3>Custom AI agent</h3>
+      <div class="price">HKD 15,600 – 31,000+</div>
+      <div class="proto">Prototype: HKD 3,120 – 6,200+ (20%, creditable)</div>
+      <p class="desc">Multiple data sources, persistent memory, error handling for real edge cases. Scoped individually.</p>
+      <ul>
+        <li>Custom AI agents with memory/state</li>
+        <li>Multi-channel + multi-system orchestration</li>
+        <li>Timeline scoped after consultation</li>
+      </ul>
+    </div>
+  </div>
+  <div class="retainer-note">+ Optional monthly retainer (10–15% of build cost) for maintenance, monitoring, and tuning after go-live.</div>
+</section>
+<section id="process" class="section">
+  <div class="section-head"><span class="section-num">02</span><h2>How it works</h2></div>
+  <p class="section-intro">Four steps, no pressure at step one or two.</p>
+  <div class="steps">
+    <div class="step"><div class="n">01</div><h3>Free consultation</h3><p>30-min call. I diagnose what's manual, what's costing you time, and whether automation is worth it for you.</p></div>
+    <div class="step"><div class="n">02</div><h3>Written plan</h3><p>Within 48h: the problem in your words, the proposed solution, and a fixed price by complexity tier.</p></div>
+    <div class="step"><div class="n">03</div><h3>Paid prototype</h3><p>A working mini-demo — real messages, real data. 20% of quoted price, fully credited if you proceed.</p></div>
+    <div class="step"><div class="n">04</div><h3>Build &amp; launch</h3><p>Live demo of the prototype, then full build. Remaining balance due on delivery.</p></div>
+  </div>
+</section>
 <section id="about" class="section">
-  <div class="section-head"><span class="section-num">01</span><h2>About</h2></div>
+  <div class="section-head"><span class="section-num">03</span><h2>About</h2></div>
   <div class="about-grid">
     <div class="about-body">
       <p>I'm a software engineer working at the intersection of distributed systems and crypto. At <strong>OKX</strong> I worked on the kind of backend and reliability problems that have to be right the first time.</p>
@@ -157,7 +231,7 @@ main{padding:0}
   </div>
 </section>
 <section id="experience" class="section">
-  <div class="section-head"><span class="section-num">02</span><h2>Experience</h2></div>
+  <div class="section-head"><span class="section-num">04</span><h2>Experience</h2></div>
   <div class="timeline">
     <div class="tl-row"><span class="tl-date">Ongoing</span><div class="tl-body"><h3>Independent / Founder</h3><p class="role">Builder — AI agents, automation &amp; ventures</p><p class="desc">Design and operate self-hosted AI-agent infrastructure and run several small ventures end to end.</p></div><span class="tl-idx">01</span></div>
     <div class="tl-row"><span class="tl-date">2022 – 2026</span><div class="tl-body"><h3>OKX</h3><p class="role">Software Engineer II — Quant Platform</p><p class="desc">Delta One Liquidity (2025–2026) · Structured Products (2022–2024). Promoted to SWE II in 2024.</p></div><span class="tl-idx">02</span></div>
@@ -172,10 +246,7 @@ main{padding:0}
     <div class="award"><div class="k">Award · 2018</div><strong>Cheng &amp; William Doo Scholarship</strong><span>University of Toronto (HK) Foundation</span></div>
     <div class="award"><div class="k">Award · 2016</div><strong>1st Runner-Up, Cyber Security Competition</strong><span>HKU &amp; Hong Kong Police Force</span></div>
   </div>
-</section>
-<section id="projects" class="section">
-  <div class="section-head"><span class="section-num">03</span><h2>Projects &amp; Ventures</h2></div>
-  <div class="bento">
+  <div class="bento" style="margin-top:40px">
     <a class="card big" href="https://github.com/g0rdonL/meegle-mcp" target="_blank" rel="noopener"><div class="card-tag">Open Source</div><h3>meegle-mcp</h3><p>Community MCP server for Meegle by Lark / Feishu — bringing project management into the agent tool ecosystem.</p><span class="card-link">github.com/g0rdonL/meegle-mcp →</span></a>
     <a class="card" href="https://github.com/g0rdonL/coinstats-mcp" target="_blank" rel="noopener"><div class="card-tag">Open Source</div><h3>coinstats-mcp</h3><p>MCP server exposing CoinStats portfolio &amp; market data to LLM agents.</p><span class="card-link">github →</span></a>
     <a class="card" href="https://github.com/g0rdonL/agentdash-reporter" target="_blank" rel="noopener"><div class="card-tag">Open Source</div><h3>AgentDash Reporter</h3><p>Reports local AI coding sessions (Claude Code, Kimi) to AgentDash.</p><span class="card-link">github →</span></a>
@@ -183,10 +254,10 @@ main{padding:0}
   </div>
 </section>
 <section id="contact" class="contact">
-  <span class="section-num">04</span>
-  <h2>Let's talk.</h2>
-  <p>Open to interesting problems in crypto, infrastructure, and AI. The fastest way to reach me:</p>
-  <div class="contact-links"><a class="btn btn-primary" href="mailto:gordon@gordonlee.xyz">email me</a><a class="btn btn-ghost" href="https://www.linkedin.com/in/g0rdonl" target="_blank" rel="noopener">linkedin</a><a class="btn btn-ghost" href="https://github.com/g0rdonL" target="_blank" rel="noopener">github</a></div>
+  <span class="section-num">05</span>
+  <h2>Let's automate something.</h2>
+  <p>Free 30-min consultation, no obligation. Tell me what's eating your time and I'll tell you honestly whether AI can fix it.</p>
+  <div class="contact-links"><a class="btn btn-primary" href="mailto:gordon@gordonlee.xyz?subject=Free%20AI%20Automation%20Consultation">book free consultation</a><a class="btn btn-ghost" href="https://www.linkedin.com/in/g0rdonl" target="_blank" rel="noopener">linkedin</a><a class="btn btn-ghost" href="https://github.com/g0rdonL" target="_blank" rel="noopener">github</a></div>
 </section>
 <footer class="footer"><span>© 2026 gordon lee</span></footer>
 </main>
