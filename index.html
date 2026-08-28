@@ -61,6 +61,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+.zh{font-family:'PingFang SC','Microsoft YaHei','Noto Sans SC',system-ui,sans-serif}
 a{color:inherit;text-decoration:none}
 .wrap{display:grid;grid-template-columns:280px 1fr;max-width:var(--max);margin:0 auto;min-height:100vh}
 .side{position:sticky;top:0;height:100vh;padding:48px 32px;border-right:1px solid var(--border-soft);display:flex;flex-direction:column}
@@ -152,6 +153,38 @@ main{padding:0}
 .tier li{font-size:.85rem;color:var(--text-dim);padding-left:16px;position:relative}
 .tier li::before{content:'—';position:absolute;left:0;color:var(--text-faint)}
 .retainer-note{margin-top:32px;padding:22px 26px;background:var(--bg-card);border:1px solid var(--border-soft);color:var(--text-dim);font-size:.9rem;font-family:var(--mono)}
+/* Bilingual (CN-ZH + EN, simultaneous, no switcher) */
+.zh{display:block;color:var(--text-faint);font-weight:400;letter-spacing:0}
+.zh-tag{font-family:'Inter',sans-serif}
+h1 .zh{font-size:.34em;margin-top:14px;color:var(--text-dim);font-weight:600;letter-spacing:0}
+.hero-tag .zh{display:inline;font-size:1em;color:var(--text-faint);margin-left:8px}
+.lede .zh{font-size:.86em;margin-top:8px;color:var(--text-faint)}
+.btn .zh{display:inline;font-size:.92em;margin-left:8px;opacity:.75}
+.side-nav a .zh{display:inline;font-size:.92em;color:var(--text-faint);margin-left:6px}
+.side-foot .zh{display:inline;font-size:1em;color:var(--text-faint);margin-left:6px}
+.stat .v .zh{font-size:.82em;margin-top:4px;color:var(--text-faint);font-weight:400}
+.section-head h2 .zh{font-size:.5em;margin-top:6px;color:var(--text-dim);font-weight:600}
+.section-intro .zh{font-size:.9em;margin-top:8px;color:var(--text-faint)}
+.tier .k .zh{display:inline;margin-left:6px;color:var(--text-faint)}
+.tier h3 .zh{font-size:.62em;margin-top:4px;color:var(--text-dim);font-weight:600}
+.tier .desc .zh{font-size:.92em;margin-top:8px;color:var(--text-faint)}
+.tier li .zh{display:inline;font-size:.94em;color:var(--text-faint)}
+.tier li .zh::before{content:' · '}
+.step h3 .zh{font-size:.72em;margin-top:4px;color:var(--text-dim);font-weight:600}
+.step p .zh{font-size:.92em;margin-top:6px;color:var(--text-faint)}
+.about-body p .zh{font-size:.92em;margin-top:8px;color:var(--text-faint)}
+.about-side h3 .zh{display:inline;font-size:.85em;color:var(--text-faint);margin-left:6px}
+.lang-bar .row .zh{display:inline;font-size:.94em;color:var(--text-faint);margin-left:6px}
+.tl-body h3 .zh{font-size:.72em;margin-top:2px;color:var(--text-dim);font-weight:600}
+.tl-body .role .zh{display:inline;font-size:.94em;color:var(--text-faint);margin-left:4px}
+.tl-body .desc .zh{font-size:.92em;margin-top:4px;color:var(--text-faint)}
+.award strong .zh{font-size:.8em;margin-top:2px;color:var(--text-dim);font-weight:600}
+.award span .zh{display:inline;font-size:.94em;color:var(--text-faint);margin-left:4px}
+.card h3 .zh{font-size:.72em;margin-top:4px;color:var(--text-dim);font-weight:600}
+.card p .zh{font-size:.92em;margin-top:6px;color:var(--text-faint)}
+.contact h2 .zh{font-size:.42em;margin-top:8px;color:var(--text-dim);font-weight:700}
+.contact p .zh{font-size:.86em;margin-top:8px;color:var(--text-faint)}
+.footer .zh{display:inline;font-size:1em;color:var(--text-faint);margin-left:6px}
 @media(max-width:960px){
   .wrap{grid-template-columns:1fr}
   .side{position:relative;height:auto;border-right:none;border-bottom:1px solid var(--border-soft);padding:32px}
@@ -165,6 +198,10 @@ main{padding:0}
   .tl-row{grid-template-columns:1fr;gap:6px}
   .steps{grid-template-columns:1fr 1fr}
   .tiers{grid-template-columns:1fr}
+  .bento{grid-auto-rows:auto}
+  .bento .card{min-height:180px}
+  h1 .zh{font-size:.4em;margin-top:10px}
+  .contact h2 .zh{font-size:.48em}
 }
 </style>
 </head>
@@ -174,127 +211,127 @@ main{padding:0}
   <div class="side-brand">gordon lee</div>
   <div class="side-sub">~/whoami</div>
   <nav class="side-nav">
-    <a href="#services"><span class="n">01</span>services</a>
-    <a href="#process"><span class="n">02</span>process</a>
-    <a href="#about"><span class="n">03</span>about</a>
-    <a href="#experience"><span class="n">04</span>experience</a>
-    <a href="#contact"><span class="n">05</span>contact</a>
+    <a href="#services"><span class="n">01</span>services<span class="zh">服务</span></a>
+    <a href="#process"><span class="n">02</span>process<span class="zh">流程</span></a>
+    <a href="#about"><span class="n">03</span>about<span class="zh">关于</span></a>
+    <a href="#experience"><span class="n">04</span>experience<span class="zh">经历</span></a>
+    <a href="#contact"><span class="n">05</span>contact<span class="zh">联系</span></a>
   </nav>
-  <div class="side-foot"><span class="dot"></span>booking free consultations</div>
+  <div class="side-foot"><span class="dot"></span>booking free consultations<span class="zh">接受免费咨询预约</span></div>
 </aside>
 <main>
 <section class="hero">
-  <p class="hero-tag">// AI automation consulting · Hong Kong SMBs</p>
-  <h1>I automate your <em>busywork</em>.</h1>
-  <p class="lede">WhatsApp AI assistants, workflow automation, and custom AI agents for Hong Kong small businesses — built and run by someone who operates <span class="hl">four live AI-agent systems</span> across real businesses today, not slideware.</p>
-  <div class="hero-cta"><a class="btn btn-primary" href="#contact">book a free consultation</a><a class="btn btn-ghost" href="#services">see pricing →</a></div>
+  <p class="hero-tag">// AI automation consulting · Hong Kong SMBs<span class="zh">// AI 自动化咨询 · 香港中小企业</span></p>
+  <h1>I automate your <em>busywork</em>.<span class="zh">我为你自动化繁琐工作。</span></h1>
+  <p class="lede">WhatsApp AI assistants, workflow automation, and custom AI agents for Hong Kong small businesses — built and run by someone who operates <span class="hl">four live AI-agent systems</span> across real businesses today, not slideware.<span class="zh">面向香港中小企业的 WhatsApp AI 助手、工作流自动化与定制 AI 代理 —— 由一个正在四个真实业务中运营着<span class="hl" style="color:var(--accent-2)">四套线上 AI 代理系统</span>的人亲自构建和维护，不是幻灯片概念。</span></p>
+  <div class="hero-cta"><a class="btn btn-primary" href="#contact">book a free consultation<span class="zh">预约免费咨询</span></a><a class="btn btn-ghost" href="#services">see pricing →<span class="zh">查看价格 →</span></a></div>
 </section>
 <div class="stats">
-  <div class="stat"><div class="k">Free</div><div class="v">30-min consultation + written plan</div></div>
-  <div class="stat"><div class="k">Proof</div><div class="v">Working prototype before you commit</div></div>
-  <div class="stat"><div class="k">Pricing</div><div class="v">Fixed, by complexity — no hourly guessing</div></div>
+  <div class="stat"><div class="k">Free</div><div class="v">30-min consultation + written plan<span class="zh">30 分钟咨询 + 书面方案</span></div></div>
+  <div class="stat"><div class="k">Proof</div><div class="v">Working prototype before you commit<span class="zh">先看可运行原型，再决定是否投入</span></div></div>
+  <div class="stat"><div class="k">Pricing</div><div class="v">Fixed, by complexity — no hourly guessing<span class="zh">按复杂度固定报价，不按小时猜测收费</span></div></div>
 </div>
 <section id="services" class="section">
-  <div class="section-head"><span class="section-num">01</span><h2>Services &amp; Pricing</h2></div>
-  <p class="section-intro">Every project starts free. I diagnose the problem, hand you a written plan with a fixed price, then build a paid prototype (creditable against the final build) so you see it working before paying in full.</p>
+  <div class="section-head"><span class="section-num">01</span><h2>Services &amp; Pricing<span class="zh">服务与价格</span></h2></div>
+  <p class="section-intro">Every project starts free. I diagnose the problem, hand you a written plan with a fixed price, then build a paid prototype (creditable against the final build) so you see it working before paying in full.<span class="zh">每个项目都从免费开始。我先诊断问题，给你一份带固定报价的书面方案，再制作一个付费原型（可抵扣最终项目费用），让你在全额付款前先看到它真实运作。</span></p>
   <div class="tiers">
     <div class="tier">
-      <div class="k">Tier 1 · Simple</div>
-      <h3>Single automation</h3>
+      <div class="k">Tier 1 · Simple<span class="zh">第一档 · 简单</span></div>
+      <h3>Single automation<span class="zh">单一自动化</span></h3>
       <div class="price">HKD 2,300 – 4,700</div>
       <div class="proto">Prototype: HKD 460 – 940 (20%, creditable)</div>
-      <p class="desc">One trigger, one action, existing API. Get a repetitive task off your plate this week.</p>
+      <p class="desc">One trigger, one action, existing API. Get a repetitive task off your plate this week.<span class="zh">一个触发条件，一个动作，使用现有 API。本周就能帮你摆脱一项重复性工作。</span></p>
       <ul>
-        <li>WhatsApp auto-reply / FAQ bot</li>
-        <li>Single-system integration</li>
-        <li>1 week typical turnaround</li>
+        <li>WhatsApp auto-reply / FAQ bot<span class="zh">WhatsApp 自动回复 / FAQ 机器人</span></li>
+        <li>Single-system integration<span class="zh">单系统集成</span></li>
+        <li>1 week typical turnaround<span class="zh">通常 1 周交付</span></li>
       </ul>
     </div>
     <div class="tier">
-      <div class="k">Tier 2 · Standard</div>
-      <h3>Multi-step workflow</h3>
+      <div class="k">Tier 2 · Standard<span class="zh">第二档 · 标准</span></div>
+      <h3>Multi-step workflow<span class="zh">多步骤工作流</span></h3>
       <div class="price">HKD 6,200 – 11,700</div>
       <div class="proto">Prototype: HKD 1,240 – 2,340 (20%, creditable)</div>
-      <p class="desc">Connects 2-3 systems with branching logic — the sweet spot for most SMB operations.</p>
+      <p class="desc">Connects 2-3 systems with branching logic — the sweet spot for most SMB operations.<span class="zh">连接 2-3 个系统并带分支逻辑 —— 大多数中小企业业务的最佳选择。</span></p>
       <ul>
-        <li>Lead qualification + CRM logging</li>
-        <li>Order/booking automation</li>
-        <li>2-3 week typical turnaround</li>
+        <li>Lead qualification + CRM logging<span class="zh">线索筛选 + CRM 记录</span></li>
+        <li>Order/booking automation<span class="zh">订单/预约自动化</span></li>
+        <li>2-3 week typical turnaround<span class="zh">通常 2-3 周交付</span></li>
       </ul>
     </div>
     <div class="tier">
-      <div class="k">Tier 3 · Complex</div>
-      <h3>Custom AI agent</h3>
+      <div class="k">Tier 3 · Complex<span class="zh">第三档 · 复杂</span></div>
+      <h3>Custom AI agent<span class="zh">定制 AI 代理</span></h3>
       <div class="price">HKD 15,600 – 31,000+</div>
       <div class="proto">Prototype: HKD 3,120 – 6,200+ (20%, creditable)</div>
-      <p class="desc">Multiple data sources, persistent memory, error handling for real edge cases. Scoped individually.</p>
+      <p class="desc">Multiple data sources, persistent memory, error handling for real edge cases. Scoped individually.<span class="zh">多数据源、持久记忆、针对真实边缘案例的错误处理。按项目单独评估范围。</span></p>
       <ul>
-        <li>Custom AI agents with memory/state</li>
-        <li>Multi-channel + multi-system orchestration</li>
-        <li>Timeline scoped after consultation</li>
+        <li>Custom AI agents with memory/state<span class="zh">带记忆/状态的定制 AI 代理</span></li>
+        <li>Multi-channel + multi-system orchestration<span class="zh">多渠道 + 多系统编排</span></li>
+        <li>Timeline scoped after consultation<span class="zh">咨询后确定时间安排</span></li>
       </ul>
     </div>
   </div>
-  <div class="retainer-note">+ Optional monthly retainer (10–15% of build cost) for maintenance, monitoring, and tuning after go-live.</div>
+  <div class="retainer-note">+ Optional monthly retainer (10–15% of build cost) for maintenance, monitoring, and tuning after go-live.<span class="zh">+ 可选月度维护合约（build 费用的 10–15%），用于上线后的维护、监控与调优。</span></div>
 </section>
 <section id="process" class="section">
-  <div class="section-head"><span class="section-num">02</span><h2>How it works</h2></div>
-  <p class="section-intro">Four steps, no pressure at step one or two.</p>
+  <div class="section-head"><span class="section-num">02</span><h2>How it works<span class="zh">合作流程</span></h2></div>
+  <p class="section-intro">Four steps, no pressure at step one or two.<span class="zh">四个步骤，前两步完全无压力、无需承诺。</span></p>
   <div class="steps">
-    <div class="step"><div class="n">01</div><h3>Free consultation</h3><p>30-min call. I diagnose what's manual, what's costing you time, and whether automation is worth it for you.</p></div>
-    <div class="step"><div class="n">02</div><h3>Written plan</h3><p>Within 48h: the problem in your words, the proposed solution, and a fixed price by complexity tier.</p></div>
-    <div class="step"><div class="n">03</div><h3>Paid prototype</h3><p>A working mini-demo — real messages, real data. 20% of quoted price, fully credited if you proceed.</p></div>
-    <div class="step"><div class="n">04</div><h3>Build &amp; launch</h3><p>Live demo of the prototype, then full build. Remaining balance due on delivery.</p></div>
+    <div class="step"><div class="n">01</div><h3>Free consultation<span class="zh">免费咨询</span></h3><p>30-min call. I diagnose what's manual, what's costing you time, and whether automation is worth it for you.<span class="zh">30 分钟通话，我会诊断哪些是人工操作、哪些在浪费你的时间，以及自动化是否值得为你做。</span></p></div>
+    <div class="step"><div class="n">02</div><h3>Written plan<span class="zh">书面方案</span></h3><p>Within 48h: the problem in your words, the proposed solution, and a fixed price by complexity tier.<span class="zh">48 小时内交付：用你的话描述问题、提出的解决方案，以及按复杂度档次的固定报价。</span></p></div>
+    <div class="step"><div class="n">03</div><h3>Paid prototype<span class="zh">付费原型</span></h3><p>A working mini-demo — real messages, real data. 20% of quoted price, fully credited if you proceed.<span class="zh">一个可运行的小型演示 —— 真实消息、真实数据。费用为报价的 20%，如继续合作可全额抵扣。</span></p></div>
+    <div class="step"><div class="n">04</div><h3>Build &amp; launch<span class="zh">构建与上线</span></h3><p>Live demo of the prototype, then full build. Remaining balance due on delivery.<span class="zh">原型现场演示后进行完整构建，剩余尾款于交付时结清。</span></p></div>
   </div>
 </section>
 <section id="about" class="section">
-  <div class="section-head"><span class="section-num">03</span><h2>About</h2></div>
+  <div class="section-head"><span class="section-num">03</span><h2>About<span class="zh">关于我</span></h2></div>
   <div class="about-grid">
     <div class="about-body">
-      <p>I'm a software engineer working at the intersection of distributed systems and crypto. At <strong>OKX</strong> I worked on the kind of backend and reliability problems that have to be right the first time.</p>
-      <p>Outside the day job I build and operate my own systems — AI-agent infrastructure, automation pipelines, and a handful of ventures across travel, real estate, and developer tooling. I like owning a problem from the database to the deploy.</p>
-      <p>Durham University graduate, lifelong tinkerer, and someone who would rather ship something small and real than talk about something big and vague.</p>
+      <p>I'm a software engineer working at the intersection of distributed systems and crypto. At <strong>OKX</strong> I worked on the kind of backend and reliability problems that have to be right the first time.<span class="zh">我是一名软件工程师，工作于分布式系统与加密货币的交叉领域。在 <strong style="color:var(--text-dim)">OKX</strong>，我负责那些必须一次做对的后端与可靠性问题。</span></p>
+      <p>Outside the day job I build and operate my own systems — AI-agent infrastructure, automation pipelines, and a handful of ventures across travel, real estate, and developer tooling. I like owning a problem from the database to the deploy.<span class="zh">工作之外，我构建并运营自己的系统 —— AI 代理基础设施、自动化流水线，以及几个横跨旅游、房地产和开发者工具领域的项目。我喜欢从数据库到部署，全程掌控一个问题。</span></p>
+      <p>Durham University graduate, lifelong tinkerer, and someone who would rather ship something small and real than talk about something big and vague.<span class="zh">杜伦大学毕业，终身的动手实践者，比起空谈宏大模糊的构想，更愿意交付小而真实的成果。</span></p>
     </div>
     <aside class="about-side">
-      <h3>Toolbox</h3>
+      <h3>Toolbox<span class="zh">技术工具</span></h3>
       <div class="chips"><span>Python</span><span>TypeScript</span><span>Node.js</span><span>Go</span><span>Java</span><span>PostgreSQL</span><span>Docker</span><span>Cloudflare</span><span>AWS</span><span>LLM/Agents</span><span>Web3</span><span>Linux</span></div>
-      <h3>Languages</h3>
-      <div class="lang-bar"><div class="row"><span>English</span><span>Native</span></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
-      <div class="lang-bar"><div class="row"><span>Cantonese</span><span>Native</span></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
-      <div class="lang-bar"><div class="row"><span>Mandarin</span><span>Professional</span></div><div class="track"><div class="fill" style="width:75%"></div></div></div>
-      <div class="lang-bar"><div class="row"><span>Spanish</span><span>Elementary</span></div><div class="track"><div class="fill" style="width:30%"></div></div></div>
-      <div class="lang-bar"><div class="row"><span>Thai</span><span>Elementary</span></div><div class="track"><div class="fill" style="width:30%"></div></div></div>
+      <h3>Languages<span class="zh">语言</span></h3>
+      <div class="lang-bar"><div class="row"><span>English<span class="zh">英语</span></span><span>Native</span></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+      <div class="lang-bar"><div class="row"><span>Cantonese<span class="zh">粤语</span></span><span>Native</span></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+      <div class="lang-bar"><div class="row"><span>Mandarin<span class="zh">普通话</span></span><span>Professional</span></div><div class="track"><div class="fill" style="width:75%"></div></div></div>
+      <div class="lang-bar"><div class="row"><span>Spanish<span class="zh">西班牙语</span></span><span>Elementary</span></div><div class="track"><div class="fill" style="width:30%"></div></div></div>
+      <div class="lang-bar"><div class="row"><span>Thai<span class="zh">泰语</span></span><span>Elementary</span></div><div class="track"><div class="fill" style="width:30%"></div></div></div>
     </aside>
   </div>
 </section>
 <section id="experience" class="section">
-  <div class="section-head"><span class="section-num">04</span><h2>Experience</h2></div>
+  <div class="section-head"><span class="section-num">04</span><h2>Experience<span class="zh">经历</span></h2></div>
   <div class="timeline">
-    <div class="tl-row"><span class="tl-date">Ongoing</span><div class="tl-body"><h3>Independent / Founder</h3><p class="role">Builder — AI agents, automation &amp; ventures</p><p class="desc">Design and operate self-hosted AI-agent infrastructure and run several small ventures end to end.</p></div><span class="tl-idx">01</span></div>
-    <div class="tl-row"><span class="tl-date">2022 – 2026</span><div class="tl-body"><h3>OKX</h3><p class="role">Software Engineer II — Quant Platform</p><p class="desc">Delta One Liquidity (2025–2026) · Structured Products (2022–2024). Promoted to SWE II in 2024.</p></div><span class="tl-idx">02</span></div>
-    <div class="tl-row"><span class="tl-date">Apr – Dec 2021</span><div class="tl-body"><h3>fair</h3><p class="role">Web Product Manager · Software Engineer</p><p class="desc">Part-time product and engineering role in London.</p></div><span class="tl-idx">03</span></div>
-    <div class="tl-row"><span class="tl-date">May – Sep 2020</span><div class="tl-body"><h3>SpaceshipHK</h3><p class="role">Information Technology Trainee</p><p class="desc">Internship in Hong Kong.</p></div><span class="tl-idx">04</span></div>
-    <div class="tl-row"><span class="tl-date">May – Aug 2019</span><div class="tl-body"><h3>IT Channel (Asia) Limited</h3><p class="role">Assistant Software Engineer</p><p class="desc">Internship in Hong Kong.</p></div><span class="tl-idx">05</span></div>
-    <div class="tl-row"><span class="tl-date">May – Jul 2018</span><div class="tl-body"><h3>Towngas</h3><p class="role">Industrial Trainee</p><p class="desc">Internship in Hong Kong.</p></div><span class="tl-idx">06</span></div>
-    <div class="tl-row"><span class="tl-date">2018 – 2019</span><div class="tl-body"><h3>University of Toronto</h3><p class="role">BSc — Computer Science</p><p class="desc">Cheng &amp; William Doo Scholarship recipient.</p></div><span class="tl-idx">07</span></div>
-    <div class="tl-row"><span class="tl-date">2019 – 2022</span><div class="tl-body"><h3>Durham University</h3><p class="role">BSc — Computer Science</p><p class="desc">Hild Bede College. Captain of the college pool team.</p></div><span class="tl-idx">08</span></div>
+    <div class="tl-row"><span class="tl-date">Ongoing</span><div class="tl-body"><h3>Independent / Founder<span class="zh">独立创业者</span></h3><p class="role">Builder — AI agents, automation &amp; ventures<span class="zh">构建者 —— AI 代理、自动化与创业项目</span></p><p class="desc">Design and operate self-hosted AI-agent infrastructure and run several small ventures end to end.<span class="zh">设计并运营自托管的 AI 代理基础设施，端到端运营多个小型业务。</span></p></div><span class="tl-idx">01</span></div>
+    <div class="tl-row"><span class="tl-date">2022 – 2026</span><div class="tl-body"><h3>OKX</h3><p class="role">Software Engineer II — Quant Platform<span class="zh">高级软件工程师 —— 量化平台</span></p><p class="desc">Delta One Liquidity (2025–2026) · Structured Products (2022–2024). Promoted to SWE II in 2024.<span class="zh">Delta One 流动性团队（2025–2026）· 结构性产品团队（2022–2024）。2024 年晋升为 SWE II。</span></p></div><span class="tl-idx">02</span></div>
+    <div class="tl-row"><span class="tl-date">Apr – Dec 2021</span><div class="tl-body"><h3>fair</h3><p class="role">Web Product Manager · Software Engineer<span class="zh">网页产品经理 · 软件工程师</span></p><p class="desc">Part-time product and engineering role in London.<span class="zh">伦敦兼职产品与工程岗位。</span></p></div><span class="tl-idx">03</span></div>
+    <div class="tl-row"><span class="tl-date">May – Sep 2020</span><div class="tl-body"><h3>SpaceshipHK</h3><p class="role">Information Technology Trainee<span class="zh">信息技术实习生</span></p><p class="desc">Internship in Hong Kong.<span class="zh">香港实习。</span></p></div><span class="tl-idx">04</span></div>
+    <div class="tl-row"><span class="tl-date">May – Aug 2019</span><div class="tl-body"><h3>IT Channel (Asia) Limited</h3><p class="role">Assistant Software Engineer<span class="zh">助理软件工程师</span></p><p class="desc">Internship in Hong Kong.<span class="zh">香港实习。</span></p></div><span class="tl-idx">05</span></div>
+    <div class="tl-row"><span class="tl-date">May – Jul 2018</span><div class="tl-body"><h3>Towngas</h3><p class="role">Industrial Trainee<span class="zh">工业实习生</span></p><p class="desc">Internship in Hong Kong.<span class="zh">香港实习。</span></p></div><span class="tl-idx">06</span></div>
+    <div class="tl-row"><span class="tl-date">2018 – 2019</span><div class="tl-body"><h3>University of Toronto</h3><p class="role">BSc — Computer Science<span class="zh">理学学士 —— 计算机科学</span></p><p class="desc">Cheng &amp; William Doo Scholarship recipient.<span class="zh">郑William杜氏奖学金得主。</span></p></div><span class="tl-idx">07</span></div>
+    <div class="tl-row"><span class="tl-date">2019 – 2022</span><div class="tl-body"><h3>Durham University</h3><p class="role">BSc — Computer Science<span class="zh">理学学士 —— 计算机科学</span></p><p class="desc">Hild Bede College. Captain of the college pool team.<span class="zh">Hild Bede 学院。学院台球队队长。</span></p></div><span class="tl-idx">08</span></div>
   </div>
   <div class="awards">
-    <div class="award"><div class="k">Award · 2018</div><strong>Cheng &amp; William Doo Scholarship</strong><span>University of Toronto (HK) Foundation</span></div>
-    <div class="award"><div class="k">Award · 2016</div><strong>1st Runner-Up, Cyber Security Competition</strong><span>HKU &amp; Hong Kong Police Force</span></div>
+    <div class="award"><div class="k">Award · 2018<span class="zh">奖项 · 2018</span></div><strong>Cheng &amp; William Doo Scholarship<span class="zh">郑William杜氏奖学金</span></strong><span>University of Toronto (HK) Foundation<span class="zh">多伦多大学（香港）基金会</span></span></div>
+    <div class="award"><div class="k">Award · 2016<span class="zh">奖项 · 2016</span></div><strong>1st Runner-Up, Cyber Security Competition<span class="zh">网络安全竞赛亚军</span></strong><span>HKU &amp; Hong Kong Police Force<span class="zh">香港大学 & 香港警务处</span></span></div>
   </div>
   <div class="bento" style="margin-top:40px">
-    <a class="card big" href="https://github.com/g0rdonL/meegle-mcp" target="_blank" rel="noopener"><div class="card-tag">Open Source</div><h3>meegle-mcp</h3><p>Community MCP server for Meegle by Lark / Feishu — bringing project management into the agent tool ecosystem.</p><span class="card-link">github.com/g0rdonL/meegle-mcp →</span></a>
-    <a class="card" href="https://github.com/g0rdonL/coinstats-mcp" target="_blank" rel="noopener"><div class="card-tag">Open Source</div><h3>coinstats-mcp</h3><p>MCP server exposing CoinStats portfolio &amp; market data to LLM agents.</p><span class="card-link">github →</span></a>
-    <a class="card" href="https://github.com/g0rdonL/agentdash-reporter" target="_blank" rel="noopener"><div class="card-tag">Open Source</div><h3>AgentDash Reporter</h3><p>Reports local AI coding sessions (Claude Code, Kimi) to AgentDash.</p><span class="card-link">github →</span></a>
-    <div class="card big card-static"><div class="card-tag">Venture</div><h3>AgentDash</h3><p>SaaS giving you an ambient, at-a-glance status of your AI coding agents on your phone.</p><span class="card-link muted">In development</span></div>
+    <a class="card big" href="https://github.com/g0rdonL/meegle-mcp" target="_blank" rel="noopener"><div class="card-tag">Open Source</div><h3>meegle-mcp</h3><p>Community MCP server for Meegle by Lark / Feishu — bringing project management into the agent tool ecosystem.<span class="zh">为 Lark / Feishu 的 Meegle 打造的社区 MCP 服务器 —— 将项目管理接入 AI 代理工具生态。</span></p><span class="card-link">github.com/g0rdonL/meegle-mcp →</span></a>
+    <a class="card" href="https://github.com/g0rdonL/coinstats-mcp" target="_blank" rel="noopener"><div class="card-tag">Open Source</div><h3>coinstats-mcp</h3><p>MCP server exposing CoinStats portfolio &amp; market data to LLM agents.<span class="zh">向 LLM 代理暴露 CoinStats 投资组合与市场数据的 MCP 服务器。</span></p><span class="card-link">github →</span></a>
+    <a class="card" href="https://github.com/g0rdonL/agentdash-reporter" target="_blank" rel="noopener"><div class="card-tag">Open Source</div><h3>AgentDash Reporter</h3><p>Reports local AI coding sessions (Claude Code, Kimi) to AgentDash.<span class="zh">将本地 AI 编程会话（Claude Code、Kimi）上报至 AgentDash。</span></p><span class="card-link">github →</span></a>
+    <div class="card big card-static"><div class="card-tag">Venture</div><h3>AgentDash</h3><p>SaaS giving you an ambient, at-a-glance status of your AI coding agents on your phone.<span class="zh">一款 SaaS 产品，让你在手机上随时一眼掌握 AI 编程代理的运行状态。</span></p><span class="card-link muted">In development</span></div>
   </div>
 </section>
 <section id="contact" class="contact">
   <span class="section-num">05</span>
-  <h2>Let's automate something.</h2>
-  <p>Free 30-min consultation, no obligation. Tell me what's eating your time and I'll tell you honestly whether AI can fix it.</p>
-  <div class="contact-links"><a class="btn btn-primary" href="mailto:gordon@gordonlee.xyz?subject=Free%20AI%20Automation%20Consultation">book free consultation</a><a class="btn btn-ghost" href="https://www.linkedin.com/in/g0rdonl" target="_blank" rel="noopener">linkedin</a><a class="btn btn-ghost" href="https://github.com/g0rdonL" target="_blank" rel="noopener">github</a></div>
+  <h2>Let's automate something.<span class="zh">让我们自动化点什么吧。</span></h2>
+  <p>Free 30-min consultation, no obligation. Tell me what's eating your time and I'll tell you honestly whether AI can fix it.<span class="zh">免费 30 分钟咨询，无任何义务。告诉我什么在消耗你的时间，我会如实告诉你 AI 能否解决它。</span></p>
+  <div class="contact-links"><a class="btn btn-primary" href="mailto:gordon@gordonlee.xyz?subject=Free%20AI%20Automation%20Consultation">book free consultation<span class="zh">预约免费咨询</span></a><a class="btn btn-ghost" href="https://www.linkedin.com/in/g0rdonl" target="_blank" rel="noopener">linkedin</a><a class="btn btn-ghost" href="https://github.com/g0rdonL" target="_blank" rel="noopener">github</a></div>
 </section>
 <footer class="footer"><span>© 2026 gordon lee</span></footer>
 </main>
